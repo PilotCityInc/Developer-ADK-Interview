@@ -45,7 +45,10 @@
     <div class="module-edit__container">
       <!-- ENTER CONTENT HERE -->
       <!-- DESIGN YOUR ACTIVITY HERE / COMMENT OUT WHEN YOU'VE STARTED DESIGNING -->
-      <div class="module-default__none">Design your activity here</div>
+      <!-- <div class="module-default__none">Design your activity here</div> -->
+      <div class="module-default__row">
+        <v-btn x-large outlined depressed>Schedule Interview Now</v-btn>
+      </div>
     </div>
   </v-container>
 </template>
@@ -76,6 +79,9 @@ export default {
 
 <style lang="scss">
 .module-default {
+  &__row {
+    text-align: center;
+  }
   &__none {
     border-radius: 5px;
     // border: 1px solid #dedede;

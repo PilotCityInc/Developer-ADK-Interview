@@ -2,13 +2,13 @@
   <v-container class="module-edit">
     <div class="module-edit__container">
       <!-- NO SETUP NECESSARY / COMMENT OUT IF SETUP IS NECESSARY -->
-      <!-- <div class="module-setup__none">No setup necessary</div> -->
+      <div class="module-setup__none">No setup necessary</div>
       <!-- ENTER CONTENT HERE -->
-      <v-text-field
+      <!-- <v-text-field
         label="Scheduling App for Interview"
         placeholder="Enter interview scheduling link"
         outlined
-      ></v-text-field>
+      ></v-text-field> -->
     </div>
   </v-container>
 </template>

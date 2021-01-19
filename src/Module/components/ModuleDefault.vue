@@ -1,5 +1,5 @@
 <template>
-  <v-container class="module-default__container">
+  <v-container>
     <div class="module-default__instructions">
       <v-expansion-panels v-model="showInstructions" class="module-default__instructions" flat>
         <v-expansion-panel>
@@ -42,7 +42,7 @@
       buffer-value="100"
       stream
     />
-    <div class="module-edit__container">
+    <div>
       <!-- ENTER CONTENT HERE -->
       <!-- DESIGN YOUR ACTIVITY HERE / COMMENT OUT WHEN YOU'VE STARTED DESIGNING -->
       <!-- <div class="module-default__none">Design your activity here</div> -->

@@ -158,28 +158,6 @@
             >
           </v-card>
         </v-menu>
-
-        <!-- ALL STAKEHOLDERS-->
-        <!-- <v-btn small disabled outlined depressed
-          ><v-icon left>mdi-message-reply-text</v-icon>Chat with all stakeholders</v-btn
-        > -->
-
-        <!-- FOR EMPLOYER ORGANIZERS -->
-        <!-- <v-btn disabled outlined depressed
-          ><v-icon left>mdi-message-reply-text</v-icon>Comment on student participant's
-          activity</v-btn
-        > -->
-        <!-- FOR STUDENT PARTICIPANTS: Ability to view and reply to employer, teacher, school and parent stakeholder comments -->
-        <!-- <v-btn small disabled outlined depressed
-          ><v-icon left>mdi-message-reply-text</v-icon>Chat with stakeholders and your
-          organizers</v-btn
-        > -->
-
-        <!-- FOR TEACHER, SCHOOL OR PARENT STAKEHOLDERS: Ability to view and reply to student and employer comments -->
-        <!-- <v-btn disabled outlined depressed
-          ><v-icon left>mdi-message-reply-text</v-icon>Comment on student participant's
-          activity</v-btn
-        > -->
         <v-timeline dense clipped>
           <v-timeline-item fill-dot class="white--text mb-12" color="pink" large>
             <template v-slot:icon>
@@ -236,11 +214,12 @@
               <v-btn class="" icon><v-icon color="grey lighten-2">mdi-thumb-up</v-icon></v-btn>
 
               <v-btn class="" icon><v-icon color="grey lighten-2">mdi-thumb-down</v-icon></v-btn>
-              <!-- 
+              <!--
               <v-btn x-small outlined depressed class="mx-0">Reply</v-btn>
               <v-btn small class="" icon><v-icon color="grey lighten-2">mdi-flag</v-icon></v-btn> -->
             </v-timeline-item>
           </v-slide-x-transition>
+<<<<<<< HEAD
 
           <!-- <v-timeline-item class="mb-6" hide-dot>
             <span>TODAY</span>
@@ -287,6 +266,8 @@
               <v-col class="text-right" cols="5"> 15:25 EDT </v-col>
             </v-row>
           </v-timeline-item> -->
+=======
+>>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
         </v-timeline>
       </v-container>
     </template>
@@ -327,8 +308,14 @@ body {
 }
 </style>
 <script lang="ts">
+<<<<<<< HEAD
 import { defineComponent } from '@vue/composition-api';
 import '../styles/module.scss';
+=======
+import { computed, reactive, ref, toRefs, defineComponent } from '@vue/composition-api';
+import '../styles/module.scss';
+// import { Collection } from 'mongodb';
+>>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
 import * as Module from './components';
 
 export default defineComponent({
@@ -339,6 +326,7 @@ export default defineComponent({
     'module-presets': Module.Presets,
     'module-preview': Module.Default
   },
+<<<<<<< HEAD
   data: () => {
     return {
       events: [],
@@ -347,11 +335,39 @@ export default defineComponent({
       moduleName: 'Interview',
       subpages: ['Setup', 'Presets', 'Monitor'],
       currentPage: 'Setup',
+=======
+  //   props: {
+  // programCollection: {
+  //   required: true,
+  //   type: Object as PropType<Collection>
+  // },
+  // programId: {
+  //   require: true,
+  //   type: String
+  // }
+  //   },
+  setup() {
+    //
+    // props.programCollection.findOne({
+    //   _id: props.programId
+    // });
+    // ENTER ACTIVITY NAME BELOW
+    const moduleName = ref('Interview');
+    const page = reactive({
+      subpages: ['Setup', 'Presets', 'Monitor'],
+      currentPage: 'Setup'
+    });
+    const getComponent = computed(() => {
+      return `module-${page.currentPage.toLowerCase()}`;
+    });
+    const color = reactive({
+>>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
       pilotcityColors: [
         ['#6eba80', '#3c9dcd', '#ea6764'],
         ['#eda1bf', '#fec34b', '#bdbdbd'],
         ['#ae90b0', '#f79961', '#000000']
       ],
+<<<<<<< HEAD
       selectedColor: '#ae90b0',
       config: {
         description: '',
@@ -400,12 +416,45 @@ export default defineComponent({
         id: this.nonce,
         text: this.input,
         time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (match, contents, offset) => {
+=======
+      // ENTER ACTIVITY COLOR
+      selectedColor: '#ae90b0'
+    });
+    const getColor = computed(() => {
+      return color.selectedColor.substring(0, 7);
+    });
+    const config = ref({
+      description: '',
+      instruct: ['']
+    });
+    const menu = ref(false);
+    // timeline
+    const timelineData = reactive({
+      events: [] as {
+        id: number;
+        text: string;
+        time: string;
+      }[],
+      input: '',
+      nonce: 0
+    });
+    const timeline = computed(() => {
+      return timelineData.events.slice().reverse();
+    });
+    function comment() {
+      const time = new Date().toTimeString();
+      timelineData.events.push({
+        id: timelineData.nonce,
+        text: timelineData.input,
+        time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (match, contents) => {
+>>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
           return ` ${contents
             .split(' ')
             .map((v: string) => v.charAt(0))
             .join('')}`;
         })
       });
+<<<<<<< HEAD
       this.input = '';
     }
   }
@@ -446,5 +495,22 @@ export default defineComponent({
   //     getColor
   //   };
   // }
+=======
+      timelineData.input = '';
+    }
+    return {
+      ...toRefs(color),
+      ...toRefs(page),
+      config,
+      moduleName,
+      menu,
+      getComponent,
+      getColor,
+      ...toRefs(timelineData),
+      timeline,
+      comment
+    };
+  }
+>>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
 });
 </script>

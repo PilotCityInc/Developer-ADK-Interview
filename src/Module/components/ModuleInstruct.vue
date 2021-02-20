@@ -1,22 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <ValidationObserver v-slot="{ invalid }" slim>
-    <!--  TODO: make the inputs into actual components -->
-    <v-container class="module-instruct">
-      <div class="module-instruct__container">
-        <div class="module-instruct__description">
-          <div class="module-instruct__description-label">
-            <span>Goal</span>
-          </div>
-
-          <v-textarea
-            v-model="goal"
-            row-height="3"
-            rows="3"
-            outlined
-            class="font-weight-black text-body-1"
-          ></v-textarea>
-=======
   <!--  TODO: make the inputs into actual components /modification -->
   <v-container class="module-instruct">
     <div class="module-instruct__container">
@@ -35,7 +17,6 @@
       <div class="module-instruct__instructions">
         <div class="module-instruct__description-label">
           <span>Instructions</span>
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
         </div>
         <div class="module-instruct__instructions">
           <div class="module-instruct__description-label">

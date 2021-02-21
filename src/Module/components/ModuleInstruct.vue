@@ -1,23 +1,26 @@
 <template>
   <!--  TODO: make the inputs into actual components /modification -->
-  <v-container class="module-instruct">
-    <div class="module-instruct__container">
-      <div class="module-instruct__description">
-        <div class="module-instruct__description-label">
-          <span>Goal</span>
+  <ValidationObserver v-slot="{}" slim>
+    <v-container class="module-instruct">
+      <div class="module-instruct__container">
+        <div class="module-instruct__description">
+          <div class="module-instruct__description-label">
+            <span>Goal</span>
+          </div>
+
+          <div
+            :contenteditable="!readonly"
+            class="font-weight-black text-body-1"
+            @input="updateDesc($event)"
+          >
+            {{ description }}
+          </div>
         </div>
-        <div
-          :contenteditable="!readonly"
-          class="font-weight-black text-body-1"
-          @input="updateDesc($event)"
-        >
-          {{ description }}
-        </div>
-      </div>
-      <div class="module-instruct__instructions">
+
         <div class="module-instruct__description-label">
           <span>Instructions</span>
         </div>
+
         <div class="module-instruct__instructions">
           <div class="module-instruct__description-label">
             <span>Instructions</span>

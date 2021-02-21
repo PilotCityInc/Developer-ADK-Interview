@@ -219,55 +219,6 @@
               <v-btn small class="" icon><v-icon color="grey lighten-2">mdi-flag</v-icon></v-btn> -->
             </v-timeline-item>
           </v-slide-x-transition>
-<<<<<<< HEAD
-
-          <!-- <v-timeline-item class="mb-6" hide-dot>
-            <span>TODAY</span>
-          </v-timeline-item>
-          <v-timeline-item class="mb-4" color="grey" icon-color="grey lighten-2" small>
-            <v-row justify="space-between">
-              <v-col cols="7"> This order was archived. </v-col>
-              <v-col class="text-right" cols="5"> 15:26 EDT </v-col>
-            </v-row>
-          </v-timeline-item>
-          <v-timeline-item class="mb-4" small>
-            <v-row justify="space-between">
-              <v-col cols="7">
-                <v-chip class="white--text ml-0" color="purple" label small> APP </v-chip>
-                Digital Downloads fulfilled 1 item.
-              </v-col>
-              <v-col class="text-right" cols="5"> 15:25 EDT </v-col>
-            </v-row>
-          </v-timeline-item>
-          <v-timeline-item class="mb-4" color="grey" small>
-            <v-row justify="space-between">
-              <v-col cols="7">
-                Order confirmation email was sent to John Leider (john@vuetifyjs.com).
-              </v-col>
-              <v-col class="text-right" cols="5"> 15:25 EDT </v-col>
-            </v-row>
-          </v-timeline-item>
-          <v-timeline-item class="mb-4" hide-dot>
-            <v-btn class="mx-0"> Resend Email </v-btn>
-          </v-timeline-item>
-          <v-timeline-item class="mb-4" color="grey" small>
-            <v-row justify="space-between">
-              <v-col cols="7">
-                A $15.00 USD payment was processed on PayPal Express Checkout
-              </v-col>
-              <v-col class="text-right" cols="5"> 15:25 EDT </v-col>
-            </v-row>
-          </v-timeline-item>
-          <v-timeline-item color="grey" small>
-            <v-row justify="space-between">
-              <v-col cols="7">
-                John Leider placed this order on Online Store (checkout #1937432132572).
-              </v-col>
-              <v-col class="text-right" cols="5"> 15:25 EDT </v-col>
-            </v-row>
-          </v-timeline-item> -->
-=======
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
         </v-timeline>
       </v-container>
     </template>
@@ -308,14 +259,9 @@ body {
 }
 </style>
 <script lang="ts">
-<<<<<<< HEAD
-import { defineComponent } from '@vue/composition-api';
-import '../styles/module.scss';
-=======
 import { computed, reactive, ref, toRefs, defineComponent } from '@vue/composition-api';
 import '../styles/module.scss';
 // import { Collection } from 'mongodb';
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
 import * as Module from './components';
 
 export default defineComponent({
@@ -326,16 +272,6 @@ export default defineComponent({
     'module-presets': Module.Presets,
     'module-preview': Module.Default
   },
-<<<<<<< HEAD
-  data: () => {
-    return {
-      events: [],
-      input: '',
-      nonce: 0,
-      moduleName: 'Interview',
-      subpages: ['Setup', 'Presets', 'Monitor'],
-      currentPage: 'Setup',
-=======
   //   props: {
   // programCollection: {
   //   required: true,
@@ -361,62 +297,11 @@ export default defineComponent({
       return `module-${page.currentPage.toLowerCase()}`;
     });
     const color = reactive({
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
       pilotcityColors: [
         ['#6eba80', '#3c9dcd', '#ea6764'],
         ['#eda1bf', '#fec34b', '#bdbdbd'],
         ['#ae90b0', '#f79961', '#000000']
       ],
-<<<<<<< HEAD
-      selectedColor: '#ae90b0',
-      config: {
-        description: '',
-        instruct: ['']
-      },
-      menu: false
-    } as {
-      events: {
-        id: number;
-        text: string;
-        time: string;
-      }[];
-      input: string;
-      nonce: number;
-      moduleName: string;
-      subpages: string[];
-      currentPage: string;
-      pilotcityColors: string[][];
-      selectedColor: string;
-      config: {
-        description: string;
-        instruct: string[];
-      };
-      menu: boolean;
-    };
-  },
-  computed: {
-    timeline(): Array<{
-      id: number;
-      text: string;
-      time: string;
-    }> {
-      return this.events.slice().reverse();
-    },
-    getComponent(): string {
-      return `module-${this.currentPage.toLowerCase()}`;
-    },
-    getColor(): string {
-      return this.selectedColor.substring(0, 7);
-    }
-  },
-  methods: {
-    comment() {
-      const time = new Date().toTimeString();
-      this.events.push({
-        id: this.nonce,
-        text: this.input,
-        time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (match, contents, offset) => {
-=======
       // ENTER ACTIVITY COLOR
       selectedColor: '#ae90b0'
     });
@@ -447,55 +332,12 @@ export default defineComponent({
         id: timelineData.nonce,
         text: timelineData.input,
         time: time.replace(/:\d{2}\sGMT-\d{4}\s\((.*)\)/, (match, contents) => {
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
           return ` ${contents
             .split(' ')
             .map((v: string) => v.charAt(0))
             .join('')}`;
         })
       });
-<<<<<<< HEAD
-      this.input = '';
-    }
-  }
-  // setup() {
-  //   // ENTER ACTIVITY NAME BELOW
-  //   const moduleName = ref('Demonstration');
-  //   const page = reactive({
-  //     subpages: ['Setup', 'Presets', 'Monitor'],
-  //     currentPage: 'Setup'
-  //   });
-  //   const getComponent = computed(() => {
-  //     return `module-${page.currentPage.toLowerCase()}`;
-  //   });
-  //   const color = reactive({
-  //     pilotcityColors: [
-  //       ['#6eba80', '#3c9dcd', '#ea6764'],
-  //       ['#eda1bf', '#fec34b', '#bdbdbd'],
-  //       ['#ae90b0', '#f79961', '#000000']
-  //     ],
-  //     // ENTER ACTIVITY COLOR
-  //     selectedColor: '#ae90b0'
-  //   });
-  //   const getColor = computed(() => {
-  //     return color.selectedColor.substring(0, 7);
-  //   });
-  //   const config = ref({
-  //     description: '',
-  //     instruct: ['']
-  //   });
-  //   const menu = ref(false);
-  //   return {
-  //     ...toRefs(color as any),
-  //     ...toRefs(page as any),
-  //     config,
-  //     moduleName,
-  //     menu,
-  //     getComponent,
-  //     getColor
-  //   };
-  // }
-=======
       timelineData.input = '';
     }
     return {
@@ -511,6 +353,5 @@ export default defineComponent({
       comment
     };
   }
->>>>>>> b0dfe998e8db87cbfca3400f93c2de42f065c0cd
 });
 </script>

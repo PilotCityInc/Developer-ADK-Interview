@@ -9,14 +9,15 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value="How would you execute?"
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -27,24 +28,51 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -52,14 +80,15 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value="What was the most difficult thing you had to do in life?"
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -70,24 +99,51 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -95,14 +151,16 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value="What was your 'ah ha' moment?"
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -113,24 +171,52 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -139,14 +225,15 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value="What problem would it be?"
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -157,24 +244,51 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -182,14 +296,15 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value="If you had a Wikipedia page, what would it say?"
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -200,24 +315,51 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -225,14 +367,15 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              rounded
               outlined
               dense
               hide-details
               placeholder="Name your video question"
               value=""
             ></v-text-field>
-            <v-btn class="ml-2" color="red" dark depressed>
-              <v-icon left>mdi-video</v-icon> Record
+            <v-btn rounded class="ml-2" color="red" dark depressed>
+              <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -243,29 +386,56 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <div class="presets__question-video"></div>
+            <div class="presets__question-video d-flex justify-center align-center">
+              <v-icon x-large color="white">mdi-play</v-icon>
+            </div>
             <div class="presets__record-button2">
               <v-tooltip left>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
+                  <v-btn
+                    x-large
+                    v-bind="attrs"
+                    class="presets__record-button mt-3 mb-3"
+                    icon
+                    v-on="on"
                     ><v-icon color="red"> mdi-circle </v-icon></v-btn
                   >
                 </template>
                 <span>Record Again</span>
               </v-tooltip>
-              <v-tooltip right>
+              <v-dialog v-model="dialog5" persistent max-width="400px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="presets__record-button mt-3 mb-3" icon v-on="on"
                     ><v-icon color="red"> mdi-trash-can-outline </v-icon></v-btn
                   >
                 </template>
-                <span>Delete Question</span>
-              </v-tooltip>
+
+                <v-card class="pt-5 pb-5">
+                  <v-card-title class="d-flex flex-column">
+                    <div class="headline font-weight-bold">Confirm deletion?</div>
+                  </v-card-title>
+
+                  <v-container class="d-flex justify-center">
+                    <div class="d-flex flex-row justify-center">
+                      <v-btn
+                        class="ma-2"
+                        x-large
+                        outlined
+                        rounded
+                        depressed
+                        @click="dialog5 = false"
+                        >Close</v-btn
+                      >
+                      <v-btn rounded depressed dark color="red" class="ma-2" x-large>Delete</v-btn>
+                    </div>
+                  </v-container>
+                </v-card>
+              </v-dialog>
             </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
-      <div class="presets__add-video mt-3">
+      <div class="presets__add-video mt-3 mb-12">
         <v-icon color="grey lighten-1" large>mdi-plus</v-icon>
       </div>
       <v-divider class="presets__divider"></v-divider>
@@ -346,6 +516,7 @@ export default defineComponent({
   },
   data() {
     return {
+      dialog5: false,
       maxMinutes,
       group,
       required,
@@ -409,6 +580,7 @@ export default defineComponent({
     width: 92%;
     margin: auto;
     text-align: center;
+    border-radius: 25px;
   }
   &__record-button2 {
     // justify-content: center;
@@ -428,6 +600,7 @@ export default defineComponent({
     height: 300px;
     // text-align: center;
     margin: 16px 24px;
+    border-radius: 25px;
   }
 
   &__reflection-buttons {

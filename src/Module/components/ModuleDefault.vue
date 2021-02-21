@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="module-default__container">
     <div class="module-default__instructions">
       <v-expansion-panels v-model="showInstructions" class="module-default__instructions" flat>
         <v-expansion-panel>
@@ -49,9 +49,9 @@
       <div class="module-default__row">
         <!-- <v-btn x-large outlined depressed>Schedule Interview Now</v-btn> -->
         <!-- <v-btn x-large outlined depressed>Start Interview</v-btn> -->
-        <v-expansion-panels accordion>
-          <v-expansion-panel>
-            <v-expansion-panel-header disable-icon-rotate>
+        <v-expansion-panels accordion flat>
+          <v-expansion-panel class="module-default__playlist-panel">
+            <v-expansion-panel-header disable-icon-rotate class="module-default__video-title">
               How would you execute?
               <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -62,7 +62,9 @@
               </template>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <div class="module-default__question-video"></div>
+              <div class="module-default__question-video d-flex justify-center">
+                <v-icon x-large color="white">mdi-play</v-icon>
+              </div>
               <v-tooltip right>
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
@@ -73,8 +75,8 @@
               </v-tooltip>
             </v-expansion-panel-content>
           </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-header disable-icon-rotate>
+          <v-expansion-panel class="module-default__playlist-panel">
+            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
               What was the most difficult thing you had to do in life?
               <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
@@ -86,7 +88,9 @@
               </template>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <div class="module-default__question-video"></div>
+              <div class="module-default__question-video d-flex justify-center">
+                <v-icon x-large color="white">mdi-play</v-icon>
+              </div>
               <v-tooltip right>
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
@@ -97,14 +101,16 @@
               </v-tooltip>
             </v-expansion-panel-content>
           </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-header disable-icon-rotate>
+          <v-expansion-panel class="module-default__playlist-panel">
+            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
               What was your 'ah ha' moment?<template v-slot:actions>
                 <v-icon color="yellow"> mdi-video </v-icon>
               </template>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <div class="module-default__question-video"></div>
+              <div class="module-default__question-video d-flex justify-center">
+                <v-icon x-large color="white">mdi-play</v-icon>
+              </div>
               <v-tooltip right>
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
@@ -115,14 +121,16 @@
               </v-tooltip>
             </v-expansion-panel-content>
           </v-expansion-panel>
-          <v-expansion-panel disabled>
-            <v-expansion-panel-header disable-icon-rotate>
+          <v-expansion-panel class="module-default__playlist-panel" disabled>
+            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
               What problem would it be?<template v-slot:actions>
                 <v-icon color="yellow"> mdi-video </v-icon>
               </template>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <div class="module-default__question-video"></div>
+              <div class="module-default__question-video d-flex justify-center">
+                <v-icon x-large color="white">mdi-play</v-icon>
+              </div>
               <v-tooltip right>
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
@@ -133,14 +141,16 @@
               </v-tooltip>
             </v-expansion-panel-content>
           </v-expansion-panel>
-          <v-expansion-panel disabled>
-            <v-expansion-panel-header disable-icon-rotate>
+          <v-expansion-panel class="module-default__playlist-panel" disabled>
+            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
               If you had a Wikipedia page, what would it say?<template v-slot:actions>
                 <v-icon color="yellow"> mdi-video </v-icon>
               </template>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-              <div class="module-default__question-video"></div>
+              <div class="module-default__question-video d-flex justify-center">
+                <v-icon x-large color="white">mdi-play</v-icon>
+              </div>
               <v-tooltip right>
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
@@ -187,6 +197,16 @@ export default {
   padding: 0px !important;
 }
 .module-default {
+  &__playlist-panel {
+    border-bottom: 1px solid #dedede;
+  }
+  &__video-title {
+    font-weight: 800;
+    line-height: 25px !important;
+    font-size: 16px !important;
+    color: #404142;
+  }
+
   &__question-video {
     background-color: #dedede;
     height: 300px;
@@ -208,7 +228,7 @@ export default {
 
   &__collapse-divider {
     margin-top: 15px;
-    margin-bottom: 75px;
+    // margin-bottom: 75px;
     margin-right: none;
     margin-left: none;
     padding-right: none;

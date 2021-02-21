@@ -85,12 +85,12 @@ export default defineComponent({
     //   }
     // });
     const boilerInstructions = ref([
-      'Click resource link',
-      'Review, complete or understand resource contents',
-      'Mark completed until all finished'
+      'Watch the interview question',
+      'Answer with a video answer',
+      'Repeat until all interview questions are completed'
     ]);
     const goal = ref([
-      'To research employer-provided resources, links, examples, possibilities & direction for projects'
+      'To interview with the employers to win internships, contracts & opportunities'
     ]);
     // function populate() {
     //   boilerInstructions.value.push('');

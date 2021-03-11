@@ -438,7 +438,7 @@
       <div class="presets__add-video mt-3 mb-12">
         <v-icon color="grey lighten-1" large>mdi-plus</v-icon>
       </div>
-      <v-divider class="presets__divider"></v-divider>
+      <!-- <v-divider class="presets__divider"></v-divider>
       <div class="presets__section-title">Instructions</div>
       <Instruct v-model="setupInstructions" />
       <v-divider class="presets__divider"></v-divider>
@@ -455,25 +455,25 @@
         :items="required"
         label="Is this activity required for participants to complete?"
         outlined
-      ></v-select>
+      ></v-select> -->
 
       <!-- <v-select
         :items="lockOrder"
         label="Lock activity group and placement order?"
         outlined
       ></v-select> -->
-      <v-select disabled :items="deliverable" label="Is this a deliverable?" outlined></v-select>
+      <!-- <v-select disabled :items="deliverable" label="Is this a deliverable?" outlined></v-select> -->
       <!-- <v-select
         :items="accessibility"
         label="Make this activity accessible to participants anytime?"
         outlined
       ></v-select> -->
-      <v-select
+      <!-- <v-select
         disabled
         :items="endEarly"
         label="Allow participants to end program early after completion of this activity?"
         outlined
-      ></v-select>
+      ></v-select> -->
       <!-- POST-ACTIVITY REFLECTION -->
       <!-- <v-text-field
         label="Post-Activity Reflection"
@@ -485,7 +485,7 @@
         <v-btn class="presets__reflection-buttons" small depressed outlined>Save</v-btn>
         <v-btn class="presets__reflection-buttons" small depressed outlined>Preview</v-btn>
       </div> -->
-      <v-divider class="presets__divider"></v-divider>
+      <!-- <v-divider class="presets__divider"></v-divider> -->
       <!-- If activity is required, show button below, make tooltip show up while disabled, right now tooltip doesn't show up -->
       <!-- <div>
         <v-tooltip bottom>
@@ -496,23 +496,23 @@
         </v-tooltip>
       </div> -->
       <!-- Delete break when the two delete buttons above and below have been integrated as one solution -->
-      <br />
+      <!-- <br /> -->
       <!-- If activity is optional, show button below -->
-      <div><v-btn color="red" disabled depressed>Delete Activity</v-btn></div>
+      <!-- <div><v-btn color="red" disabled depressed>Delete Activity</v-btn></div> -->
     </div>
   </v-container>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import Instruct from './ModuleInstruct.vue';
+// import Instruct from './ModuleInstruct.vue';
 import { group, required, deliverable, endEarly, maxMinutes } from './const';
 // import gql from 'graphql-tag';
 
 export default defineComponent({
   name: 'ModulePresets',
   components: {
-    Instruct
+    // Instruct
   },
   data() {
     return {

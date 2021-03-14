@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container class="module-default pa-2">
     <div class="module-default__instructions">
       <v-expansion-panels v-model="showInstructions" class="module-default__instructions" flat>
         <v-expansion-panel>
@@ -165,7 +165,7 @@
         <v-btn class="mt-10" disabled x-large outlined depressed>Finish Interview</v-btn>
       </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">

@@ -11,12 +11,12 @@
             <v-text-field
               rounded
               outlined
-              dense
+              large
               hide-details
               placeholder="Name your video question"
               value="How would you execute?"
             ></v-text-field>
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large class="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
@@ -80,14 +80,14 @@
         <v-expansion-panel>
           <v-expansion-panel-header disable-icon-rotate hide-actions>
             <v-text-field
+              large
               rounded
               outlined
-              dense
               hide-details
               placeholder="Name your video question"
               value="What was the most difficult thing you had to do in life?"
             ></v-text-field>
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large class="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
@@ -153,13 +153,13 @@
             <v-text-field
               rounded
               outlined
-              dense
+              large
               hide-details
               placeholder="Name your video question"
               value="What was your 'ah ha' moment?"
             ></v-text-field>
 
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large lass="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
@@ -227,12 +227,12 @@
             <v-text-field
               rounded
               outlined
-              dense
+              large
               hide-details
               placeholder="Name your video question"
               value="What problem would it be?"
             ></v-text-field>
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large class="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
@@ -298,12 +298,12 @@
             <v-text-field
               rounded
               outlined
-              dense
+              large
               hide-details
               placeholder="Name your video question"
               value="If you had a Wikipedia page, what would it say?"
             ></v-text-field>
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large class="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>
@@ -369,12 +369,12 @@
             <v-text-field
               rounded
               outlined
-              dense
+              large
               hide-details
               placeholder="Name your video question"
               value=""
             ></v-text-field>
-            <v-btn rounded class="ml-2" color="red" dark depressed>
+            <v-btn rounded large class="ml-2" color="red" dark depressed>
               <v-icon left>mdi-video</v-icon> Watch
             </v-btn>
             <!-- <template>

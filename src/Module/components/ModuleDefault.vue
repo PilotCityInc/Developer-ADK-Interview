@@ -42,129 +42,125 @@
       buffer-value="100"
       stream
     />
-    <div>
-      <!-- ENTER CONTENT HERE -->
-      <!-- DESIGN YOUR ACTIVITY HERE / COMMENT OUT WHEN YOU'VE STARTED DESIGNING -->
-      <!-- <div class="module-default__none">Design your activity here</div> -->
-      <div class="module-default__row">
-        <!-- <v-btn x-large outlined depressed>Schedule Interview Now</v-btn> -->
-        <!-- <v-btn x-large outlined depressed>Start Interview</v-btn> -->
-        <v-expansion-panels accordion flat>
-          <v-expansion-panel class="module-default__playlist-panel">
-            <v-expansion-panel-header disable-icon-rotate class="module-default__video-title">
-              How would you execute?
-              <!-- <template>
+    <!-- ENTER CONTENT HERE -->
+    <!-- DESIGN YOUR ACTIVITY HERE / COMMENT OUT WHEN YOU'VE STARTED DESIGNING -->
+    <!-- <div class="module-default__none">Design your activity here</div> -->
+    <!-- <v-btn x-large outlined depressed>Schedule Interview Now</v-btn> -->
+    <!-- <v-btn x-large outlined depressed>Start Interview</v-btn> -->
+    <v-expansion-panels accordion flat>
+      <v-expansion-panel class="module-default__playlist-panel">
+        <v-expansion-panel-header disable-icon-rotate class="module-default__video-title">
+          How would you execute?
+          <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
               </template> -->
-              <template v-slot:actions>
-                <!-- <v-btn><v-icon color="red"> mdi-circle </v-icon></v-btn> -->
-                <v-icon color="green"> mdi-check-bold </v-icon>
-              </template>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="module-default__question-video d-flex justify-center">
-                <v-icon x-large color="white">mdi-play</v-icon>
-              </div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
-                    ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
-                  >
-                </template>
-                <span>Record Answer</span>
-              </v-tooltip>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-          <v-expansion-panel class="module-default__playlist-panel">
-            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
-              What was the most difficult thing you had to do in life?
-              <!-- <template>
+          <template v-slot:actions>
+            <!-- <v-btn><v-icon color="red"> mdi-circle </v-icon></v-btn> -->
+            <v-icon color="green"> mdi-check-bold </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <div class="module-default__question-video d-flex justify-center">
+            <v-icon x-large color="white">mdi-play</v-icon>
+          </div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
+                ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
+              >
+            </template>
+            <span>Record Answer</span>
+          </v-tooltip>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel class="module-default__playlist-panel">
+        <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
+          What was the most difficult thing you had to do in life?
+          <!-- <template>
                 <v-icon color="green"> mdi-check </v-icon>
               </template> -->
-              <template v-slot:actions>
-                <!-- <v-btn><v-icon color="red"> mdi-circle </v-icon></v-btn> -->
+          <template v-slot:actions>
+            <!-- <v-btn><v-icon color="red"> mdi-circle </v-icon></v-btn> -->
 
-                <v-icon color="green"> mdi-check-bold </v-icon>
-              </template>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="module-default__question-video d-flex justify-center">
-                <v-icon x-large color="white">mdi-play</v-icon>
-              </div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
-                    ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
-                  >
-                </template>
-                <span>Record Answer</span>
-              </v-tooltip>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-          <v-expansion-panel class="module-default__playlist-panel">
-            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
-              What was your 'ah ha' moment?<template v-slot:actions>
-                <v-icon color="yellow"> mdi-video </v-icon>
-              </template>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="module-default__question-video d-flex justify-center">
-                <v-icon x-large color="white">mdi-play</v-icon>
-              </div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
-                    ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
-                  >
-                </template>
-                <span>Record Answer</span>
-              </v-tooltip>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-          <v-expansion-panel class="module-default__playlist-panel" disabled>
-            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
-              What problem would it be?<template v-slot:actions>
-                <v-icon color="yellow"> mdi-video </v-icon>
-              </template>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="module-default__question-video d-flex justify-center">
-                <v-icon x-large color="white">mdi-play</v-icon>
-              </div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
-                    ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
-                  >
-                </template>
-                <span>Record Answer</span>
-              </v-tooltip>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-          <v-expansion-panel class="module-default__playlist-panel" disabled>
-            <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
-              If you had a Wikipedia page, what would it say?<template v-slot:actions>
-                <v-icon color="yellow"> mdi-video </v-icon>
-              </template>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div class="module-default__question-video d-flex justify-center">
-                <v-icon x-large color="white">mdi-play</v-icon>
-              </div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
-                    ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
-                  >
-                </template>
-                <span>Record Answer</span>
-              </v-tooltip>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
-        <v-btn class="mt-10" disabled x-large outlined depressed>Finish Interview</v-btn>
-      </div>
-    </div>
+            <v-icon color="green"> mdi-check-bold </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <div class="module-default__question-video d-flex justify-center">
+            <v-icon x-large color="white">mdi-play</v-icon>
+          </div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
+                ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
+              >
+            </template>
+            <span>Record Answer</span>
+          </v-tooltip>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel class="module-default__playlist-panel">
+        <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
+          What was your 'ah ha' moment?<template v-slot:actions>
+            <v-icon color="yellow"> mdi-video </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <div class="module-default__question-video d-flex justify-center">
+            <v-icon x-large color="white">mdi-play</v-icon>
+          </div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
+                ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
+              >
+            </template>
+            <span>Record Answer</span>
+          </v-tooltip>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel class="module-default__playlist-panel" disabled>
+        <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
+          What problem would it be?<template v-slot:actions>
+            <v-icon color="yellow"> mdi-video </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <div class="module-default__question-video d-flex justify-center">
+            <v-icon x-large color="white">mdi-play</v-icon>
+          </div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
+                ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
+              >
+            </template>
+            <span>Record Answer</span>
+          </v-tooltip>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel class="module-default__playlist-panel" disabled>
+        <v-expansion-panel-header class="module-default__video-title" disable-icon-rotate>
+          If you had a Wikipedia page, what would it say?<template v-slot:actions>
+            <v-icon color="yellow"> mdi-video </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <div class="module-default__question-video d-flex justify-center">
+            <v-icon x-large color="white">mdi-play</v-icon>
+          </div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" class="mt-3 mb-3" icon v-on="on"
+                ><v-icon x-large color="red"> mdi-circle </v-icon></v-btn
+              >
+            </template>
+            <span>Record Answer</span>
+          </v-tooltip>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+    <v-btn class="mt-10" disabled x-large outlined depressed>Finish Interview</v-btn>
   </v-container>
 </template>
 
@@ -211,9 +207,6 @@ export default {
     background-color: #dedede;
     height: 300px;
   }
-  &__row {
-    text-align: center;
-  }
   &__none {
     border-radius: 5px;
     // border: 1px solid #dedede;
@@ -247,7 +240,7 @@ export default {
   }
 
   &__container {
-    // width: 100%;
+    width: 100%;
     // padding: none;
     // margin: none;
     margin-top: 0px;
